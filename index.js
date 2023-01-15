@@ -97,3 +97,47 @@
 //     break;
 // }
 // console.log(message);
+
+// 8. При завантаженні сторінки користувачу у prompt пропонується ввести число від 0 до 59 'Hello, enter please the number between  0 and 59'.
+//Зроби перевірку на відповідність введеного числа вказаному діапазону (0-59). Якщо число не відповідає виведіть
+//alert з повідомленням "The [number] is outside 0 and 59"
+// Визначте в яку чверть години попаде
+// це число(в першу, другу, третю чи четверту) та виведіть це повідомлення у консоль, наприклад, "Number [number] refers to 2 quarters".
+
+const number = prompt('Hello, enter please the number between  0 and 59');
+const answerNum = Number(parseInt(number));
+
+// if (answerNum > 59 || answerNum < 0) {
+//   alert(`The ${answerNum} is outside 0 and 59`);
+//   console.log(answerNum);
+// } else if (answerNum <= 15) {
+//   console.log(`Number ${answerNum} refers to 1 quarters`);
+// } else if (answerNum <= 30) {
+//   console.log(`Number ${answerNum} refers to 2 quarters`);
+// } else if (answerNum <= 45) {
+//   console.log(`Number ${answerNum} refers to 3 quarters`);
+// } else {
+//   console.log(`Number ${answerNum} refers to 4 quarters`);
+// }
+const quoter = Math.ceil(answerNum / 15);
+if (answerNum > 59 || answerNum < 0) {
+  alert(`The ${answerNum} is outside 0 and 59`);
+} else {
+  switch (quoter) {
+    case 1:
+      console.log(`Number ${answerNum} refers to 1 quarters`);
+      break;
+    case 2:
+      console.log(`Number ${answerNum} refers to 2 quarters`);
+      break;
+    case 3:
+      console.log(`Number ${answerNum} refers to 3 quarters`);
+      break;
+    case 4:
+      console.log(`Number ${answerNum} refers to 4 quarters`);
+      break;
+    default:
+      console.log(`The ${answerNum} is outside 0 and 59`);
+      break;
+  }
+}
