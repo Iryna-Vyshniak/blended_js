@@ -32,13 +32,12 @@
 // const max = 13;
 // let multiply = 1;
 
-
-// for (let i = max; i >= min; i -= 1) { 
-// 	if (i % 2 === 0) { 
+// for (let i = max; i >= min; i -= 1) {
+// 	if (i % 2 === 0) {
 // 		// console.log(i);
 // 		multiply *= i;
 
 // 	}
-	
+
 // }
 // console.log(multiply);
