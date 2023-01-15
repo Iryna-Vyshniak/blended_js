@@ -26,3 +26,19 @@
 // console.log(
 //   `${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}`
 // );
+
+//3. Напишіть цикл, який виведе в консоль усі парні числа від max до min включно по зменшенню
+// const min = 10;
+// const max = 13;
+// let multiply = 1;
+
+
+// for (let i = max; i >= min; i -= 1) { 
+// 	if (i % 2 === 0) { 
+// 		// console.log(i);
+// 		multiply *= i;
+
+// 	}
+	
+// }
+// console.log(multiply);
