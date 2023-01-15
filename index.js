@@ -14,3 +14,15 @@
 // }
 
 //ask === 'ECMAScript' ? alert('True!') : alert("Don't you know? ECMAScript!");
+
+//2. Напишіть програму, яка запитає у користувача через prompt "Enter the number of minutes to format"
+//число (кількість хвилин) і виведе в консоль
+//рядок у форматі годин і хвилин, тобто 70 має повернути у консоль "01:10"
+
+// const time = prompt("Enter the number of minutes to format");
+// const hours = Math.floor(time / 60);
+// const minutes = time % 60;
+
+// console.log(
+//   `${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}`
+// );
