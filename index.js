@@ -120,7 +120,10 @@ const answerNum = Number(parseInt(number));
 //   console.log(`Number ${answerNum} refers to 4 quarters`);
 // }
 const quoter = Math.ceil(answerNum / 15);
-if (answerNum > 59 || answerNum < 0) {
+
+if (Number.isNaN(answerNum)) {
+  alert(`Please, enter valid value - number from 1 to 59`);
+} else if (answerNum > 59 || answerNum < 0) {
   alert(`The ${answerNum} is outside 0 and 59`);
 } else {
   switch (quoter) {
