@@ -121,26 +121,53 @@ const answerNum = Number(parseInt(number));
 // }
 const quoter = Math.ceil(answerNum / 15);
 
-if (Number.isNaN(answerNum)) {
-  alert(`Please, enter valid value - number from 1 to 59`);
-} else if (answerNum > 59 || answerNum < 0) {
-  alert(`The ${answerNum} is outside 0 and 59`);
-} else {
-  switch (quoter) {
-    case 1:
-      console.log(`Number ${answerNum} refers to 1 quarters`);
-      break;
-    case 2:
-      console.log(`Number ${answerNum} refers to 2 quarters`);
-      break;
-    case 3:
-      console.log(`Number ${answerNum} refers to 3 quarters`);
-      break;
-    case 4:
-      console.log(`Number ${answerNum} refers to 4 quarters`);
-      break;
-    default:
-      console.log(`The ${answerNum} is outside 0 and 59`);
-      break;
-  }
+// if (Number.isNaN(answerNum)) {
+//   alert(`Please, enter valid value - number from 1 to 59`);
+// } else if (answerNum > 59 || answerNum < 0) {
+//   alert(`The ${answerNum} is outside 0 and 59`);
+// } else {
+//   switch (quoter) {
+//     case 1:
+//       console.log(`Number ${answerNum} refers to 1 quarters`);
+//       break;
+//     case 2:
+//       console.log(`Number ${answerNum} refers to 2 quarters`);
+//       break;
+//     case 3:
+//       console.log(`Number ${answerNum} refers to 3 quarters`);
+//       break;
+//     case 4:
+//       console.log(`Number ${answerNum} refers to 4 quarters`);
+//       break;
+//     default:
+//       console.log(`The ${answerNum} is outside 0 and 59`);
+//       break;
+//   }
+// }
+
+switch (true) {
+  case Number.isNaN(answerNum):
+    alert(`Please, enter valid value - number from 1 to 59`);
+    break;
+  case answerNum > 59 || answerNum < 0:
+    alert(`The ${answerNum} is outside 0 and 59`);
+    break;
+  default:
+    switch (quoter) {
+      case 1:
+        console.log(`Number ${answerNum} refers to 1 quarters`);
+        break;
+      case 2:
+        console.log(`Number ${answerNum} refers to 2 quarters`);
+        break;
+      case 3:
+        console.log(`Number ${answerNum} refers to 3 quarters`);
+        break;
+      case 4:
+        console.log(`Number ${answerNum} refers to 4 quarters`);
+        break;
+      default:
+        console.log(`The ${answerNum} is outside 0 and 59`);
+        break;
+    }
 }
