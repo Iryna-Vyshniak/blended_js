@@ -225,25 +225,79 @@
 //sum() перевіряє чи присутні  властивості prop1/prop2 та повертає їх суму, в противному випадку повертає null
 //mult() перевіряє чи присутні  властивості prop1/prop2 та повертає їх добуток, в противному випадку повертає null
 // Не забудьте, що математичні оператори працюють коректно тільки з числовими значеннями
-const calculator = {
-  read(a, b) {
-    this.prop1 = a;
-    this.prop2 = b;
-  },
-  sum() {
-    if (typeof this.prop1 === 'number' && typeof this.prop2 === 'number') {
-      return this.prop1 + this.prop2;
-    }
-    return null;
-  },
-  mult() {
-    if (typeof this.prop1 === 'number' && typeof this.prop2 === 'number') {
-      return this.prop1 * this.prop2;
-    }
-    return null;
-  },
-};
-calculator.read(12, 10);
-console.log(calculator.sum());
-calculator.read(12, 10);
-console.log(calculator.mult());
+// const calculator = {
+//   read(a, b) {
+//     this.prop1 = a;
+//     this.prop2 = b;
+//   },
+//   sum() {
+//     if (typeof this.prop1 === 'number' && typeof this.prop2 === 'number') {
+//       return this.prop1 + this.prop2;
+//     }
+//     return null;
+//   },
+//   mult() {
+//     if (typeof this.prop1 === 'number' && typeof this.prop2 === 'number') {
+//       return this.prop1 * this.prop2;
+//     }
+//     return null;
+//   },
+// };
+// calculator.read(12, 10);
+// console.log(calculator.sum());
+// calculator.read(12, 10);
+// console.log(calculator.mult());
+
+//5. Напишіть функцію updateObject, яка приймає об'єкт та ключ
+//і повертає новий об'єкт без вказаної властивості
+//Очікуваний результат ({ a: 1, b: 2, c: 3 }, 'b') => {a: 1, c: 3}
+// const updateObject = function( object, removeKey){
+//       const newObject = {};
+//       const arrayKeys = Object.keys(object);
+//       for (const key of arrayKeys) {
+//         if(key !== removeKey){
+//           newObject[key] = object[key];
+//         }
+//       }return newObject;
+//     }
+//     console.log(updateObject({ a: 1, b: 2, c: 3 }, 'b'));
+
+// *3. Напишіть фукцію calcTotalPrice(stones, stonesName),
+//яка приймає масив об'єктів і рядок з назвою каменю.
+//Функція обчислює і повертає загальну вартість каменів з таким іменем
+// const stones = [
+//   { name: 'emerald', price: 1300, quantity: 4 },
+//   { name: 'diamond', price: 2700, quantity: 6 },
+//   { name: 'sapphire', price: 400, quantity: 7 },
+//   { name: 'rubble', price: 150, quantity: 100 },
+// ];
+// const calcTotalPrice = function (stones, stonesName) {
+//   let totalPrice = 0;
+//   for (let stone of stones) {
+//     if (stone.name === stonesName) {
+//       totalPrice = stone.price * stone.quantity;
+//     }
+//   }
+//   return totalPrice;
+// };
+// console.log(calcTotalPrice(stones, 'emerald'));
+// console.log(calcTotalPrice(stones, 'diamond'));
+// console.log(calcTotalPrice(stones, 'sapphire'));
+// console.log(calcTotalPrice(stones, 'rubble'));
+
+//6. Напишіть функцію updateObject, яка приймає об'єкт та перелік ключів
+//і повертає новий об'єкт без вказаних властивостей
+//Очікуваний результат ({ a: 1, b: 2, c: 3 }, 'b', 'c') => {a: 1}
+
+// function updateObject(data, ...array) {
+//   const newObject = {};
+//   const arrayKeys = Object.keys(data);
+//   for (const key of arrayKeys) {
+//     if (!array.includes(key)) {
+//       newObject[key] = data[key];
+//     }
+//   }
+//   return newObject;
+// }
+// console.log(updateObject({ a: 1, b: 2, c: 3 }, "b", "c"));
+// console.log(updateObject({ a: 1, b: 2, c: 3 }));
