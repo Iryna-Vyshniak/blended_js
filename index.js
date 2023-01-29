@@ -104,8 +104,8 @@
 // Визначте в яку чверть години попаде
 // це число(в першу, другу, третю чи четверту) та виведіть це повідомлення у консоль, наприклад, "Number [number] refers to 2 quarters".
 
-const number = prompt('Hello, enter please the number between  0 and 59');
-const answerNum = Number(parseInt(number));
+// const number = prompt('Hello, enter please the number between  0 and 59');
+// const answerNum = Number(parseInt(number));
 
 // if (answerNum > 59 || answerNum < 0) {
 //   alert(`The ${answerNum} is outside 0 and 59`);
@@ -119,7 +119,7 @@ const answerNum = Number(parseInt(number));
 // } else {
 //   console.log(`Number ${answerNum} refers to 4 quarters`);
 // }
-const quoter = Math.ceil(answerNum / 15);
+// const quoter = Math.ceil(answerNum / 15);
 
 // if (Number.isNaN(answerNum)) {
 //   alert(`Please, enter valid value - number from 1 to 59`);
@@ -145,29 +145,57 @@ const quoter = Math.ceil(answerNum / 15);
 //   }
 // }
 
-switch (true) {
-  case Number.isNaN(answerNum):
-    alert(`Please, enter valid value - number from 1 to 59`);
-    break;
-  case answerNum > 59 || answerNum < 0:
-    alert(`The ${answerNum} is outside 0 and 59`);
-    break;
-  default:
-    switch (quoter) {
-      case 1:
-        console.log(`Number ${answerNum} refers to 1 quarters`);
-        break;
-      case 2:
-        console.log(`Number ${answerNum} refers to 2 quarters`);
-        break;
-      case 3:
-        console.log(`Number ${answerNum} refers to 3 quarters`);
-        break;
-      case 4:
-        console.log(`Number ${answerNum} refers to 4 quarters`);
-        break;
-      default:
-        console.log(`The ${answerNum} is outside 0 and 59`);
-        break;
-    }
-}
+// switch (true) {
+//   case Number.isNaN(answerNum):
+//     alert(`Please, enter valid value - number from 1 to 59`);
+//     break;
+//   case answerNum > 59 || answerNum < 0:
+//     alert(`The ${answerNum} is outside 0 and 59`);
+//     break;
+//   default:
+//     switch (quoter) {
+//       case 1:
+//         console.log(`Number ${answerNum} refers to 1 quarters`);
+//         break;
+//       case 2:
+//         console.log(`Number ${answerNum} refers to 2 quarters`);
+//         break;
+//       case 3:
+//         console.log(`Number ${answerNum} refers to 3 quarters`);
+//         break;
+//       case 4:
+//         console.log(`Number ${answerNum} refers to 4 quarters`);
+//         break;
+//       default:
+//         console.log(`The ${answerNum} is outside 0 and 59`);
+//         break;
+//     }
+// }
+//1. Напишіть скрипт, який для об'єкта user, послідовно:
+//1 додасть властивість mood зі значенням 'happy'
+//2 замінить значення властивості hobby на 'skydiving'
+//3 замінить значення властивості premium на false
+//4 використовуючи Object.keys() и for...of, виведе у консоль зміст об'єкта users у форматі:
+//name: John
+//"age: 20"
+//"hobby: skydiving"
+//"premium: false"
+//"mood: happy"
+
+// const user = {
+//   name: "John",
+//   age: 20,
+//   hobby: "tenis",
+//   premium: true,
+// };
+
+// user.mood = "happy";
+// user.hobby = "skydiving";
+// user.premium = false;
+// console.log(user);
+
+// const keys = Object.keys(user);
+
+// for (let key of keys) {
+//   console.log(`${key}:${user[key]}`);
+// }
