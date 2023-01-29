@@ -220,3 +220,25 @@
 // }
 // console.log(getTotalSalary(salaries));
 
+//*3. Напишіть фукцію calcTotalPrice(stones, stonesName),
+//яка приймає масив об'єктів і рядок з назвою каменю.
+//Функція обчислює і повертає загальну вартість каменів з таким іменем
+// const stones = [
+//   { name: 'emerald', price: 1300, quantity: 4 },
+//   { name: 'diamond', price: 2700, quantity: 6 },
+//   { name: 'sapphire', price: 400, quantity: 7 },
+//   { name: 'rubble', price: 150, quantity: 100 },
+// ];
+// const calcTotalPrice = function (stones, stonesName) {
+//   let totalPrice = 0;
+//   for (let stone of stones) {
+//     if (stone.name === stonesName) {
+//       totalPrice = stone.price * stone.quantity;
+//     }
+//   }
+//   return totalPrice;
+// };
+// console.log(calcTotalPrice(stones, 'emerald'));
+// console.log(calcTotalPrice(stones, 'diamond'));
+// console.log(calcTotalPrice(stones, 'sapphire'));
+// console.log(calcTotalPrice(stones, 'rubble'));
