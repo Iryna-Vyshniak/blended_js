@@ -220,3 +220,17 @@
 // }
 // console.log(getTotalSalary(salaries));
 
+//5. Напишіть функцію updateObject, яка приймає об'єкт та ключ
+//і повертає новий об'єкт без вказаної властивості
+//Очікуваний результат ({ a: 1, b: 2, c: 3 }, 'b') => {a: 1, c: 3}
+const updateObject = function (object, removeKey) {
+  const newObject = {};
+  const arrayKeys = Object.keys(object);
+  for (const key of arrayKeys) {
+    if (key !== removeKey) {
+      newObject[key] = object[key];
+    }
+  }
+  return newObject;
+};
+console.log(updateObject({ a: 1, b: 2, c: 3 }, "b"));
