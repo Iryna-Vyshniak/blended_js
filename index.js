@@ -388,3 +388,26 @@
 //   return number * 2;
 // }
 // console.log(each([1, 2, 5, 6], mult));
+
+// 7. Напишіть функцію makeCounter, яка повертає іншу
+//функцію, яка лічить і виводе в консоль кількість своїх викликів
+
+function makeCounter() {
+  let total = 0;
+  return function foo() {
+    total += 1;
+    console.log(total);
+  };
+}
+
+const counter = makeCounter();
+const counter2 = makeCounter();
+console.log(counter);
+counter();
+counter();
+counter();
+counter2();
+counter2();
+counter2();
+counter2();
+counter2();
