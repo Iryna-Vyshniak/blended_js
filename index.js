@@ -373,3 +373,18 @@
 // };
 
 // callAction(item.getQuantity.bind(item));
+
+// 6. Напишіть функцію each(array, callback), яка
+//першим параметром приймає масив, а другим - функцію,
+//яка застосується до кожного елемента масива.
+//Функція each має повернути новий масив, елементами
+//якого будуть результати виклику callback.
+//callback функція має множити елементи на 2
+
+// function each(array, callback) {
+//   return array.map((number) => callback(number));
+// }
+// function mult(number) {
+//   return number * 2;
+// }
+// console.log(each([1, 2, 5, 6], mult));
