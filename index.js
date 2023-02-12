@@ -304,16 +304,16 @@
 // 7. Напишіть функцію changeObject, яка приймає як параметр об'єкт
 // та повертає масив, в якому кожен елемент це масив, який складається з двох елементів [key, value]
 // Очікуваний результат console.log(changeObject({ a: 1, b: 2, c: 3 })) // [["a", 1], ["b", 2], ["c", 3]]
-const user = {
-  name: "John",
-  surName: "Stones",
-  age: 20,
-  hobby: "tenis",
-  haveCar: true,
-  merried: false,
-};
-const changeObject = (user) => Object.entries(user);
-console.log(changeObject(user));
+// const user = {
+//   name: "John",
+//   surName: "Stones",
+//   age: 20,
+//   hobby: "tenis",
+//   haveCar: true,
+//   merried: false,
+// };
+// const changeObject = (user) => Object.entries(user);
+// console.log(changeObject(user));
 
 // 2. Напишіть дві функції
 //makeProduct(name, price, callback) - приймає
@@ -350,3 +350,26 @@ console.log(changeObject(user));
 // // console.log(makeShef("shef"));
 // const shef = makeShef("shef");
 // shef("pizza");
+
+// 4. Виправте помилки, щоб код працював
+// const product = {
+//   price: 5000,
+//   showPrice() {
+//     console.log(this.price);
+//   },
+// };
+// product.showPrice();
+
+// 5. Виправте код, щоб він працював
+// function callAction(callback) {
+//   callback();
+// }
+
+// const item = {
+//   getQuantity() {
+//     console.log(this.quantity);
+//   },
+//   quantity: 5,
+// };
+
+// callAction(item.getQuantity.bind(item));
