@@ -305,12 +305,48 @@
 // та повертає масив, в якому кожен елемент це масив, який складається з двох елементів [key, value]
 // Очікуваний результат console.log(changeObject({ a: 1, b: 2, c: 3 })) // [["a", 1], ["b", 2], ["c", 3]]
 const user = {
-	name: 'John',
-	surName: 'Stones',
-	age: 20,
-	hobby: 'tenis',
-	haveCar: true,
-	merried: false,
-}
-const changeObject =  user => Object.entries(user);
+  name: "John",
+  surName: "Stones",
+  age: 20,
+  hobby: "tenis",
+  haveCar: true,
+  merried: false,
+};
+const changeObject = (user) => Object.entries(user);
 console.log(changeObject(user));
+
+// 2. Напишіть дві функції
+//makeProduct(name, price, callback) - приймає
+//ім'я та ціну товару, а також callback.
+//Функція створює об'єкт товару, додаючи йому унікальний
+//ідентіфікатор у властивість id та викликає callback
+//передаючи йому створений об'єкт.
+//showProduct(product) - коллбек, що приймає об'єкт
+//продукта і логірує його в консоль
+
+// const makeProduct = function(name, price, callback){
+//     const product = {
+//         name: name,
+//         price: price,
+//         id: Math.random(),
+//     }
+//     callback(product);
+// }
+// const showProduct = function(product){
+//     console.log(product);
+// }
+// makeProduct('apple', '120', showProduct)
+
+// 3. Напишіть функцію makeShef(shefName), яка повертає функцію
+//makeDish(dish), яка памятає ім'я шефа під час її виклику
+//Функція makeDish має логіровать "<shef> is cooking <dish>"
+
+// function makeShef(shefName) {
+//   function makeDish(dish) {
+//     console.log(`${shefName} is cooking ${dish}`);
+//   }
+//   return makeDish;
+// }
+// // console.log(makeShef("shef"));
+// const shef = makeShef("shef");
+// shef("pizza");
