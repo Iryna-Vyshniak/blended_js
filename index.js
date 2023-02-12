@@ -392,22 +392,37 @@
 // 7. Напишіть функцію makeCounter, яка повертає іншу
 //функцію, яка лічить і виводе в консоль кількість своїх викликів
 
-function makeCounter() {
-  let total = 0;
-  return function foo() {
-    total += 1;
-    console.log(total);
-  };
-}
+// function makeCounter() {
+//   let total = 0;
+//   return function foo() {
+//     total += 1;
+//     console.log(total);
+//   };
+// }
 
-const counter = makeCounter();
-const counter2 = makeCounter();
-console.log(counter);
-counter();
-counter();
-counter();
-counter2();
-counter2();
-counter2();
-counter2();
-counter2();
+// const counter = makeCounter();
+// const counter2 = makeCounter();
+// console.log(counter);
+// counter();
+// counter();
+// counter();
+// counter2();
+// counter2();
+// counter2();
+// counter2();
+// counter2();
+
+// 8. Напишите функцию savePassword(password) которая принимает
+//пароль и возвращает внутреннюю функцию, которая принимает
+//строку и возвращает буль true, если строка совпадает с сохраненным
+//паролем и false - если не совпадает
+
+// function savePassword(orgPassword) {
+//   function checkPassword(newPassword) {
+//     console.log(orgPassword === newPassword);
+//   }
+//   return checkPassword;
+// }
+// const romaPassword = savePassword("RomaYYY");
+// romaPassword("vika");
+// romaPassword("RomaYYY");
