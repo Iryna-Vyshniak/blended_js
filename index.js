@@ -500,3 +500,25 @@
 //     console.log("Error");
 //   }
 // }
+
+/*
+Задача 6
+По кліку на кнопку "Double" збільшіть значення
+в кожному елементі списку у 2 рази
+*/
+
+const btnEl = document.querySelector("#double");
+const liEls = document.querySelectorAll(".listItem");
+
+btnEl.addEventListener("click", onBtnClick);
+
+function onBtnClick() {
+  //1 звертаємося до псевдомасиву і перебираємо його
+  //2. змінюємо кожний елемент
+  liEls.forEach((element) => {
+    element.textContent *= 2;
+    console.log(element.textContent);
+  });
+
+  //   console.log(liEls);
+}
