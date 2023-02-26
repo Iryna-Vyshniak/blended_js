@@ -444,16 +444,45 @@
 Можна нажимати на неї декілька разів або вручну змінити вміст інпутів. */
 //
 
-const btnEl = document.querySelector("#swapButton");
-btnEl.addEventListener("click", onBtnClick);
+// const btnEl = document.querySelector("#swapButton");
+// btnEl.addEventListener("click", onBtnClick);
 
-const leftInputEl = document.querySelector('[data-type="left"]');
-const rightInputEl = document.querySelector('[data-type="right"]');
+// const leftInputEl = document.querySelector('[data-type="left"]');
+// const rightInputEl = document.querySelector('[data-type="right"]');
 
-function onBtnClick() {
-  //   console.log();
-  let saveValue = "";
-  saveValue = leftInputEl.value;
-  leftInputEl.value = rightInputEl.value;
-  rightInputEl.value = saveValue;
+// function onBtnClick() {
+//   //   console.log();
+//   let saveValue = "";
+//   saveValue = leftInputEl.value;
+//   leftInputEl.value = rightInputEl.value;
+//   rightInputEl.value = saveValue;
+// }
+
+/*
+Задача 3
+Кнопка "Decrease" робить квадрат меньше на 10 пікселів, кпопка "Increase" - більше на 10 пикселів.
+*/
+
+const buttonDecrease = document.querySelector('[data-type="decrease"]');
+const buttonIncrease = document.querySelector('[data-type="increase"]');
+const boxEl = document.querySelector("#box");
+
+buttonDecrease.addEventListener("click", onbuttonDecreaseClick);
+
+buttonIncrease.addEventListener("click", onbuttonIncreaseClick);
+
+function onbuttonDecreaseClick() {
+  let boxWidth = boxEl.offsetWidth;
+
+  const newWidth = `${boxWidth + 10}px`;
+  boxEl.style.width = newWidth;
+  boxEl.style.height = newWidth;
+}
+
+function onbuttonIncreaseClick() {
+  let boxWidth = boxEl.offsetWidth;
+
+  const newWidth = `${boxWidth - 10}px`;
+  boxEl.style.width = newWidth;
+  boxEl.style.height = newWidth;
 }
