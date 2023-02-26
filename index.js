@@ -426,3 +426,14 @@
 // const romaPassword = savePassword("RomaYYY");
 // romaPassword("vika");
 // romaPassword("RomaYYY");
+
+/*
+Задача 1
+Натискання на кнопку "SHOW ME" має виводити значення з поля введення (подивіться на елементи розмітки в html файлі)
+*/
+// const butEL = document.querySelector("#alertButton");
+// const inputEL = document.querySelector("#alertInput");
+// butEL.addEventListener("click", onButClick);
+// function onButClick() {
+//   console.log(inputEL.value);
+// }
