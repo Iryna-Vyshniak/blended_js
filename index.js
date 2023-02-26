@@ -507,18 +507,38 @@
 в кожному елементі списку у 2 рази
 */
 
-const btnEl = document.querySelector("#double");
-const liEls = document.querySelectorAll(".listItem");
+// const btnEl = document.querySelector("#double");
+// const liEls = document.querySelectorAll(".listItem");
 
-btnEl.addEventListener("click", onBtnClick);
+// btnEl.addEventListener("click", onBtnClick);
 
-function onBtnClick() {
-  //1 звертаємося до псевдомасиву і перебираємо його
-  //2. змінюємо кожний елемент
-  liEls.forEach((element) => {
-    element.textContent *= 2;
-    console.log(element.textContent);
-  });
+// function onBtnClick() {
+//   //1 звертаємося до псевдомасиву і перебираємо його
+//   //2. змінюємо кожний елемент
+//   liEls.forEach((element) => {
+//     element.textContent *= 2;
+//     console.log(element.textContent);
+//   });
 
-  //   console.log(liEls);
-}
+//   //   console.log(liEls);
+// }
+
+/*
+Задача 9
+Удали из списка те элементы, которые отмечены.
+*/
+
+// const formEl = document.querySelector(".checkboxForm");
+// const checkboxEl = document.querySelectorAll('[type="checkbox"]');
+
+// formEl.addEventListener("submit", onSubmitBtnClick);
+
+// function onSubmitBtnClick(e) {
+//   e.preventDefault();
+
+//   checkboxEl.forEach((element) => {
+//     if (element.checked) {
+//       element.closest(".checkboxWrapper").remove();
+//     }
+//   });
+// }
