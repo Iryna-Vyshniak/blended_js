@@ -437,3 +437,23 @@
 // function onButClick() {
 //   console.log(inputEL.value);
 // }
+
+/*
+Задача 2
+При натисканні на кнопку "SWAP ME" виконується обмін змісту між двома інпутами. 
+Можна нажимати на неї декілька разів або вручну змінити вміст інпутів. */
+//
+
+const btnEl = document.querySelector("#swapButton");
+btnEl.addEventListener("click", onBtnClick);
+
+const leftInputEl = document.querySelector('[data-type="left"]');
+const rightInputEl = document.querySelector('[data-type="right"]');
+
+function onBtnClick() {
+  //   console.log();
+  let saveValue = "";
+  saveValue = leftInputEl.value;
+  leftInputEl.value = rightInputEl.value;
+  rightInputEl.value = saveValue;
+}
