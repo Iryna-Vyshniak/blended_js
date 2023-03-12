@@ -555,9 +555,31 @@
 const form = document.querySelector("#task-form");
 const textList = document.querySelector("#task-list");
 form.addEventListener("submit", onAddList);
+textList.addEventListener("click", onListClick);
+
 function onAddList(e) {
   e.preventDefault();
   const text = e.target.elements.taskName.value;
-  textList.insertAdjacentHTML("afterbegin", `<li>${text}</li>`);
+  textList.insertAdjacentHTML(
+    "afterbegin",
+    `<li>${text} <button type="button" class="">Видалити</button></li> `
+  );
   e.target.reset();
+  setToLocalStorage(text);
+}
+
+function setToLocalStorage(text) {
+  // const message = text;
+
+  const dataSaveLocalStorage = JSON.parse(localStorage.getItem("tasks")) || [];
+
+  dataSaveLocalStorage.push(text);
+  localStorage.setItem("tasks", JSON.stringify(dataSaveLocalStorage));
+}
+
+function onListClick(e) {
+  if (e.target.nodeName !== "BUTTON") {
+    return;
+  }
+  e.target.closest("li").remove();
 }
