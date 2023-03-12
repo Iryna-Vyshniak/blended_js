@@ -617,3 +617,32 @@
 //   }).then(console.log);
 // }
 // greet();
+/**
+ * ЗАДАЧА 2
+ * - Використовуй prompt і повертай результат його виклику.
+ * - Створи функцію, в середині якої буде проміс.
+ * Якщо значення не є числом, відклоняй проміс і логуй "error".
+ * Якщо значення парне, обробляй проміс і повертай рядок "even" через 1 секунду.
+ * Якщо значення не парне, обробляй проміс і повертай рядок "odd" через 2 секунди.
+ */
+function chackEvent() {
+  const number = prompt("get yours number");
+  return new Promise((resolve, reject) => {
+    if (isNaN(number)) {
+      throw new Error("error");
+    }
+    if (number % 2 === 0) {
+      setTimeout(() => {
+        resolve("even");
+      }, 1000);
+      return;
+    }
+    if (number % 2 !== 0) {
+      setTimeout(() => {
+        resolve("odd");
+      }, 2000);
+      return;
+    }
+  });
+}
+chackEvent().then(console.log).catch(console.log);
