@@ -542,3 +542,22 @@
 //     }
 //   });
 // }
+/**
+ * ЗАДАЧА 8
+ * Створи перелік справ.
+ * Є  інпут, в який вноситься зміст задачі.
+ * При натисканні на кнопку "Додати" задача додається в список #list.
+ * Поруч з кожною задачею знаходится кнопка "Видалити", щоб можна було
+ * видалити цю задачу із списку.
+ * Список з задачами має бути доступним післе перезавантаження сторінки.
+ */
+
+const form = document.querySelector("#task-form");
+const textList = document.querySelector("#task-list");
+form.addEventListener("submit", onAddList);
+function onAddList(e) {
+  e.preventDefault();
+  const text = e.target.elements.taskName.value;
+  textList.insertAdjacentHTML("afterbegin", `<li>${text}</li>`);
+  e.target.reset();
+}
