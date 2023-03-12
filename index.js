@@ -552,34 +552,53 @@
  * Список з задачами має бути доступним післе перезавантаження сторінки.
  */
 
-const form = document.querySelector("#task-form");
-const textList = document.querySelector("#task-list");
-form.addEventListener("submit", onAddList);
-textList.addEventListener("click", onListClick);
+// const form = document.querySelector("#task-form");
+// const textList = document.querySelector("#task-list");
+// form.addEventListener("submit", onAddList);
+// textList.addEventListener("click", onListClick);
 
-function onAddList(e) {
-  e.preventDefault();
-  const text = e.target.elements.taskName.value;
-  textList.insertAdjacentHTML(
-    "afterbegin",
-    `<li>${text} <button type="button" class="">Видалити</button></li> `
-  );
-  e.target.reset();
-  setToLocalStorage(text);
-}
+// function onAddList(e) {
+//   e.preventDefault();
+//   const text = e.target.elements.taskName.value;
+//   const id = Date.now();
+//   textList.insertAdjacentHTML(
+//     "afterbegin",
+//     `<li>${text} <button type="button" data-id="${id}" class="">Видалити</button></li> `
+//   );
+//   e.target.reset();
+//   setToLocalStorage({ text, id });
+// }
 
-function setToLocalStorage(text) {
-  // const message = text;
+// function setToLocalStorage(object) {
+//   // const message = text;
 
-  const dataSaveLocalStorage = JSON.parse(localStorage.getItem("tasks")) || [];
+//   const dataSaveLocalStorage = JSON.parse(localStorage.getItem("tasks")) || [];
 
-  dataSaveLocalStorage.push(text);
-  localStorage.setItem("tasks", JSON.stringify(dataSaveLocalStorage));
-}
+//   dataSaveLocalStorage.push(object);
+//   localStorage.setItem("tasks", JSON.stringify(dataSaveLocalStorage));
+// }
 
-function onListClick(e) {
-  if (e.target.nodeName !== "BUTTON") {
-    return;
-  }
-  e.target.closest("li").remove();
-}
+// function onListClick(e) {
+//   if (e.target.nodeName !== "BUTTON") {
+//     return;
+//   }
+//   const id = e.target.dataset.id;
+//   e.target.closest("li").remove();
+//   const dataSaveLocalStorage = JSON.parse(localStorage.getItem("tasks"));
+//   const newData = dataSaveLocalStorage.filter((item) => String(item.id) !== id);
+//   localStorage.setItem("tasks", JSON.stringify(newData));
+// }
+
+// function alltext() {
+//   const dataLocalStorage = JSON.parse(localStorage.getItem("tasks"));
+//   if (dataLocalStorage) {
+//     const markup = dataLocalStorage
+//       .map(
+//         (el) =>
+//           `<li>${el.text} <button type="button" data-id="${el.id}" class="">Видалити</button></li> `
+//       )
+//       .join("");
+//     textList.insertAdjacentHTML("afterbegin", markup);
+//   }
+// }
+// alltext();
